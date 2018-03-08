@@ -1,5 +1,5 @@
 # ProducerConsumerThreads
-Threaded producer and consumer threaded program used to print user input to the terminal. Makes use of mutexs, condition variables and structs.
+Threaded producer and consume program used to print user input to the terminal. Makes use of mutexs, condition variables and structs.
 
 Mainline acts as the **_producer thread_**, reading input from the user. This input is then passed to the next available and waiting **_consumer thread_** which handles the user input and sends it to a **_printer thread_** to be printed to the console.
 
@@ -22,10 +22,6 @@ Run program
 ## Example
 
 ```bash
-make 
-gcc    -c -o printer.o printer.c
-gcc -pthread printer.o  -lm -lcurses -o printer
-
 ./printer
 
 Enter 'quit' to exit program...
